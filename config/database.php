@@ -19,7 +19,7 @@ class Database {
 		return $conn;
 	}
 
-	public function connect_mov() {
+	/*public function connect_mov() {
 		$conn_db = mssql_connect($this->_host, $this->_user, $this->_pass);
 		$select_db = mssql_select_db($this->_db, $conn_db);
 
@@ -30,9 +30,9 @@ class Database {
 			die('Failed to connect to database' . mssql_get_last_message());
 		}
 		return $conn_db;
-	}
+	}*/
 
-	/*public function connect_mov() {
+	public function connect_mov() {
 		$conn_db = mssql_connect('192.168.240.107', 'dev_dboard', 'devdboard');
 		$select_db = mssql_select_db('db_dboard', $conn_db);
 
@@ -43,5 +43,5 @@ class Database {
 			die('Failed to connect to database' . mssql_get_last_message());
 		}
 		return $conn_db;
-	}*/
+	}
 }
